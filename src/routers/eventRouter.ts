@@ -13,7 +13,9 @@ router.post("/", authMiddleware, async (req: Request, res: Response) => {
     const token = req.headers.authorization?.split(" ")[1];
 
     const userId = jwt.verify(token, constants.JWT_SECRET).id;
-    const user = await userRepo.findOne(userId);
+    const user = await userRepo.findOne({
+      where: { id: userId },
+    });
 
     const event = eventRepo.create({
       title,

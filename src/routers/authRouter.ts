@@ -94,6 +94,8 @@ router.post("/register", async (req: Request, res: Response) => {
       { expiresIn: "24h" }
     );
 
+    await userRepo.save(newUser);
+
     // Return the token and user details
     return res.status(201).json({
       token,
