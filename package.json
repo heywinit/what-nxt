@@ -1,7 +1,7 @@
 {
   "name": "what-nxt",
   "version": "1.0.0",
-  "description": "API for What-NXT application using Express.js",
+  "description": "Backend for What-NXT, an event booking app made for a hackathon using ExpressJS and PostgreSQL",
   "main": "app.js",
   "scripts": {
     "start": "npm run build && node build/app.js",
