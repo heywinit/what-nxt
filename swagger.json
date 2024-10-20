@@ -328,36 +328,6 @@
             "description": "Internal server error"
           }
         }
-      },
-      "delete": {
-        "summary": "Delete event by ID",
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Event deleted successfully"
-          },
-          "404": {
-            "description": "Event not found"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        }
       }
     }
   }
